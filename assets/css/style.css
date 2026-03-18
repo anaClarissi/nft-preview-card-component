@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
 :root {
-    --blue-01: hsl(215, 51%, 70%);
-    --blue-line: hsl(215, 32%, 27%);
-    --blue-main-bg: hsl(217, 54%, 11%);
-    --blue-card-bg: hsl(216, 50%, 16%);
-    --cyan-01: hsl(178, 100%, 50%);
-    --white: hsl(0, 0%, 100%);
+    --blue-01: #8bacda;
+    --blue-line: #2f415b;
+    --blue-main-bg: #0d192b;
+    --blue-card-bg: #14253d;
+    --cyan-01: #00fff7;
+    --white: #ffffff;
 
     --font-primary: 'Outfit';
 }
@@ -21,6 +21,10 @@ body {
     font-family: var(--font-primary), Arial, Helvetica, sans-serif;
     font-size: 1.125em;
     font-weight: 300;
+}
+
+a {
+    text-decoration: none;
 }
 
 .container {
@@ -47,15 +51,47 @@ body {
     box-shadow: -1px 20px 40px 20px rgba(0, 0, 0, 0.164);
 }
 
+.container-img {
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.container-img:hover .background {
+    display: flex;
+}
+
+.background {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #00fff775;
+    z-index: 10000;
+}
+
+.background img {
+    width: 50px;
+    height: 50px;
+}
+
 .card-img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 10px;
-    margin-bottom: 10px;
 }
 
 .title{
     font-size: 1.25em;
     font-weight: 600;
+}
+.title a {
     color: var(--white);
 }
 
@@ -96,6 +132,14 @@ body {
     border: 1px solid var(--white);
 }
 
-.perfil p span {
+.perfil p a {
     color: var(--white);
+}
+
+.title a, .perfil p a {
+    transition: color .2s ease-in-out;
+}
+
+.title a:hover, .perfil p a:hover {
+    color: #00fff7;
 }
