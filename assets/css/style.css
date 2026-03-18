@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root {
+    --blue-01: hsl(215, 51%, 70%);
+    --blue-line: hsl(215, 32%, 27%);
+    --blue-main-bg: hsl(217, 54%, 11%);
+    --blue-card-bg: hsl(216, 50%, 16%);
+    --cyan-01: hsl(178, 100%, 50%);
+    --white: hsl(0, 0%, 100%);
+
+    --font-primary: 'Outfit';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary), Arial, Helvetica, sans-serif;
+    font-size: 1.125em;
+}
